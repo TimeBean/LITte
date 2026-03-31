@@ -1,4 +1,4 @@
-namespace Litee.Indexer.Model;
+namespace Litee.Engine.Model;
 
 public class Page
 {

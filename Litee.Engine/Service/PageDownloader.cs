@@ -1,6 +1,6 @@
-using Litee.Indexer.Model;
+using Litee.Engine.Model;
 
-namespace Litee.Indexer.Service;
+namespace Litee.Engine.Service;
 
 public class PageDownloader
 {

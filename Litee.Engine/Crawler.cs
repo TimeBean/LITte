@@ -1,8 +1,9 @@
 using System.Diagnostics.CodeAnalysis;
 using HtmlAgilityPack;
-using Litee.Indexer.Model;
+using Litee.Engine.Model;
+using Litee.Engine.Service;
 
-namespace Litee.Indexer.Service;
+namespace Litee.Engine;
 
 public class Crawler
 {
