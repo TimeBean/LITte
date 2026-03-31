@@ -13,8 +13,9 @@ public class Url
             throw new ArgumentException("URL can't be empty.", nameof(url));
         }
 
-        if (!Uri.TryCreate(url, UriKind.Absolute, out var uriResult)
-            || (uriResult.Scheme != Uri.UriSchemeHttp && uriResult.Scheme != Uri.UriSchemeHttps))
+        // ReSharper disable once ComplexConditionExpression
+        if (!Uri.TryCreate(url, UriKind.Absolute, out var uriResult) ||
+            (uriResult.Scheme != Uri.UriSchemeHttp && uriResult.Scheme != Uri.UriSchemeHttps))
         {
             throw new ArgumentException("URL wrong format.", nameof(url));
         }
