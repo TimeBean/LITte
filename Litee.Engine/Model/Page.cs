@@ -4,6 +4,7 @@ public class Page
 {
     public Guid Id { get; private set; }
     public string Content { get; set; }
+    public string Keywords { get; set; }
     public Url Url { get; set; }
 
     public Page(Url url, string content)
@@ -11,6 +12,8 @@ public class Page
         Id = Guid.NewGuid();
         Url = url;
         Content = content;
+        Keywords = HtmlCleaner.CleanHtml(content);
+        /*Keywords = content;*/
     }
 
     public Page(Guid id, Url url, string content)
@@ -18,5 +21,7 @@ public class Page
         Id = id;
         Url = url;
         Content = content;
+        Keywords = HtmlCleaner.CleanHtml(content);
+        /*Keywords = content;*/
     }
 }

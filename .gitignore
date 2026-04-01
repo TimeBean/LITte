@@ -5,3 +5,6 @@ riderModule.iml
 /_ReSharper.Caches/
 .idea/
 
+Litte.WebApp/node_modules/
+Litte.WebApp/appsettings.Development.json
+Litte.WebApp/package-lock.json

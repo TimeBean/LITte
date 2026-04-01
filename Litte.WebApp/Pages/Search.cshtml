@@ -1,0 +1,27 @@
+@page
+@model Litte.WebApp.Pages.Search
+
+@{
+    ViewData["Title"] = "Search";
+}
+
+<div>
+    <h1 class="text-shadow-stone-600">Query: "@Model.Query"</h1>
+    
+    @if(Model.Pages is not null)
+    {
+        @foreach (var webPage in Model.Pages)
+        {
+            var keywordToShow = @webPage.Keywords.Split(' ').Take(3).ToList();
+            
+            <div class="pb-2">
+                <a class="text-blue-600" href="@webPage.Url">@webPage.Url</a> 
+                @foreach(var word in keywordToShow)
+                {
+                    <a>@word</a>
+                }
+            </div>
+        }
+    }
+    
+</div>
